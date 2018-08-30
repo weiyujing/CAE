@@ -95,7 +95,7 @@ class MyData:
                 # 下一句可注释
                 # print('''Your picture's shape is {0}, it's should be (224,224,3), /
                 # we would reshape it, but be carefull'''.format(tmp.shape))
-                tmp = skimage.color.rgba2rgb(tmp)           #RGBA -> RGB
+                tmp = skimage.color.rgba2rgb(tmp)           #RGBA -> RGB  png才有，若是jpg需注释掉这句
                 self._images.append(skimage.transform.resize(tmp, (224, 224)))
             else:
                 self._images.append(tmp)
