@@ -165,7 +165,7 @@ def struct_graph():
     maxpool5 = tf.layers.max_pooling2d(conv13, pool_size=(2, 2), strides=(2, 2), padding='same')
     # Now 7x7x512
     # 去掉全连接层的平均池化
-    encode = tf.layers.average_pooling2d(maxpool5, pool_size=(7, 7), strides=(1, 1), padding='same')
+    encode = tf.layers.average_pooling2d(maxpool5, pool_size=(7, 7), strides=(1, 1))
     # Now 1x1x512
 
     # Flatten the input data展平
